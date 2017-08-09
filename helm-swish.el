@@ -45,7 +45,11 @@
 
 (defclass helm-source-swish (helm-source-in-buffer)
   ((init :initform #'helm-swish-init)
-   (get-line :initform #'buffer-substring)))
+   (get-line :initform #'buffer-substring)
+   (allow-dups :initform t)
+   (follow :initform 1)
+   (nomark :initform t)
+   (requires-pattern :initform 1)))
 
 ;;;; Footer
 
